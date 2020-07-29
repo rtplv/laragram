@@ -11,5 +11,15 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+mix.webpackConfig({
+    devServer: {
+        watchOptions: {
+            poll: true
+        }
+    }
+});
+
+mix.browserSync('laragram.ru');
+
+mix.js('resources/js/layouts/main/index.js', 'public/js/layouts/main.js')
+    .sass('resources/sass/layouts/main/index.scss', 'public/css/layouts/main.css');
