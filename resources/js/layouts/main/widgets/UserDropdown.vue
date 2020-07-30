@@ -3,9 +3,8 @@
          :class="{ 'is-active': isOpened }">
         <div class="dropdown-trigger" @click="handleDropdownOpened">
             <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                <img class="avatar" src="assets/avatar.jpg"/>
                 <span>Руслан Туполев</span>
-
-                <i class="button-icon fas fa-angle-down" aria-hidden="true" />
             </button>
         </div>
 
@@ -37,17 +36,26 @@
 </script>
 
 <style lang="scss" scoped>
+    @import '../../../../sass/variables';
+
     .dropdown {
         .button {
             border: none;
+            .button-icon {
+                margin-left: 10px;
+                font-weight: 300;
+            }
+            .avatar {
+                vertical-align: middle;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
             &.is-focused,
             &:focus {
                 border: none;
                 box-shadow: none;
-            }
-            .button-icon {
-                margin-left: 10px;
-                font-weight: 300;
             }
         }
     }
