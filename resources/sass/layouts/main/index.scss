@@ -1,1 +1,13 @@
+@import '../../bootstrap';
 @import 'header';
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}

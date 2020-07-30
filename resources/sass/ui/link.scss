@@ -1,0 +1,9 @@
+@import '../_variables.scss';
+
+.ui-link {
+    color: $tab-inactive;
+    text-decoration: none;
+    &:hover {
+        color: $tab-active;
+    }
+}
