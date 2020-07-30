@@ -1,6 +1,10 @@
 // Header
+import Vue from 'vue';
+import UserDropdown from "./widgets/UserDropdown";
 
-Vue.component(
-    'main-layout-user-dropdown',
-    require('./widgets/UserDropdown.vue').default
-);
+const vm = new Vue({
+    el: '#mainLayoutVueApp',
+    components: {
+        UserDropdown
+    }
+})

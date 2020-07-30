@@ -23,6 +23,6 @@
 {{--            Ruslan Tupolev--}}
 {{--            <i class="main-layout-header-user__link-icon fas fa-chevron-down"></i>--}}
 {{--        </a>--}}
-        <main-layout-user-dropdown></main-layout-user-dropdown>
+        <user-dropdown></user-dropdown>
     </article>
 </header>
