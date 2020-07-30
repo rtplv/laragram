@@ -1,31 +1,21 @@
 <template>
-    <div class="dropdown is-active">
-        <div class="dropdown-trigger">
+    <div class="dropdown"
+         :class="{ 'is-active': isOpened }">
+        <div class="dropdown-trigger" @click="handleDropdownOpened">
             <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                <span>Dropdown button</span>
+                <span>Руслан Туполев</span>
 
-                <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
+                <i class="button-icon fas fa-angle-down" aria-hidden="true" />
             </button>
         </div>
-        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+
+        <div class="dropdown-menu"
+             id="dropdownMenu"
+             role="menu">
             <div class="dropdown-content">
-                <a href="#" class="dropdown-item">
-                    Dropdown item
-                </a>
-                <a class="dropdown-item">
-                    Other dropdown item
-                </a>
-                <a href="#" class="dropdown-item is-active">
-                    Active dropdown item
-                </a>
-                <a href="#" class="dropdown-item">
-                    Other dropdown item
-                </a>
-                <hr class="dropdown-divider">
-                <a href="#" class="dropdown-item">
-                    With a divider
+                <a href="#"
+                   class="dropdown-item">
+                    Выйти
                 </a>
             </div>
         </div>
@@ -34,10 +24,31 @@
 
 <script>
     export default {
-        name: "MainLayoutUserDropdown"
+        name: "MainLayoutUserDropdown",
+        data: () => ({
+           isOpened: false,
+        }),
+        methods: {
+            handleDropdownOpened() {
+                this.isOpened = !this.isOpened;
+            }
+        }
     }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+    .dropdown {
+        .button {
+            border: none;
+            &.is-focused,
+            &:focus {
+                border: none;
+                box-shadow: none;
+            }
+            .button-icon {
+                margin-left: 10px;
+                font-weight: 300;
+            }
+        }
+    }
 </style>
