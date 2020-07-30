@@ -10,7 +10,7 @@
     <nav class="main-layout-header-navigation">
         <ul class="ui-navbar">
             <li>
-                <a href="#">
+                <a href="/feed">
                     Лента
                 </a>
             </li>
@@ -18,10 +18,11 @@
     </nav>
 
     <article class="main-layout-header-user">
-        <a class="main-layout-header-user__link ui-link"
-           href="#">
-            Ruslan Tupolev
-            <i class="main-layout-header-user__link-icon fas fa-chevron-down"></i>
-        </a>
+{{--        <a class="main-layout-header-user__link ui-link"--}}
+{{--           href="#">--}}
+{{--            Ruslan Tupolev--}}
+{{--            <i class="main-layout-header-user__link-icon fas fa-chevron-down"></i>--}}
+{{--        </a>--}}
+        <main-layout-user-dropdown></main-layout-user-dropdown>
     </article>
 </header>
