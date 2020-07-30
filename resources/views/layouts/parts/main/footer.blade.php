@@ -1,3 +1,3 @@
 <footer class="main-layout-footer">
-    Подвал
+    © LARAGRAM, 2020
 </footer>

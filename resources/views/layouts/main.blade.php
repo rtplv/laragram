@@ -30,8 +30,7 @@
             @yield('content')
         </main>
 
-
-        {{--    @include('layouts.parts.main.footer')--}}
+        @include('layouts.parts.main.footer')
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
     <script src="{{ mix('js/layouts/main.js') }}"></script>

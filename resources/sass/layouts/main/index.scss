@@ -1,5 +1,7 @@
 @import '../../bootstrap';
+
 @import 'header';
+@import 'footer';
 
 html,
 body {
@@ -13,3 +15,16 @@ body {
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
 }
+
+// Sticky footer
+#mainLayoutVueApp {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    main {
+        flex: 1;
+        background-color: #fafafa;
+    }
+}
+
+
