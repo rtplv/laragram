@@ -31,7 +31,7 @@ php artisan migrate
 php artisan db:seed --class=DatabaseSeeder
 ```
 
-3. Build frontend
+4. Build frontend
 
 - for development:  `npm run hot`
 - for production: `npm run prod`
