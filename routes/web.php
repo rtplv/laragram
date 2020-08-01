@@ -15,5 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('/feed', 'FeedController@index');
 
 Auth::routes();
+
+Route::middleware('auth')->group(function() {
+    Route::get('/auth/getUser', 'AuthController@getUser');
+    Route::get('/auth/logout', 'AuthController@logout');
+});

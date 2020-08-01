@@ -7,15 +7,17 @@
         </a>
     </article>
 
-    <nav class="main-layout-header-navigation">
-        <ul class="ui-navbar">
-            <li>
-                <a href="/feed">
-                    Лента
-                </a>
-            </li>
-        </ul>
-    </nav>
+    @if(\Illuminate\Support\Facades\Auth::check())
+        <nav class="main-layout-header-navigation">
+            <ul class="ui-navbar">
+                <li>
+                    <a href="/feed">
+                        Лента
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    @endif
 
     <article class="main-layout-header-user">
 {{--        <a class="main-layout-header-user__link ui-link"--}}

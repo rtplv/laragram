@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class HomeController extends Controller
+class FeedController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -11,6 +11,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        $this->middleware('auth');
     }
 
     /**
@@ -20,6 +21,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return view('feed');
     }
 }
