@@ -14,7 +14,7 @@ class UsersSeeder extends Seeder
         \App\Models\User::query()->create([
             'name' => 'demo',
             'email' => 'demo@demo.ru',
-            'password' => 'demo'
+            'password' => \Illuminate\Support\Facades\Hash::make('demo')
         ]);
     }
 }
