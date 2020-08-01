@@ -25,6 +25,12 @@ npm install
 php artisan key:generate
 ```
 
+3. Fill DB data
+```bash
+php artisan migrate
+php artisan db:seed --class=DatabaseSeeder
+```
+
 3. Build frontend
 
 - for development:  `npm run hot`
