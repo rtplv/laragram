@@ -1,0 +1,16 @@
+.login-page {
+    padding: 25px 0;
+    .panel {
+        margin: 0 auto;
+        width: 50%;
+        .login-form {
+            width: 100%;
+            .field {
+                margin-bottom: .75rem;
+            }
+            .confirm-field {
+                align-items: center;
+            }
+        }
+    }
+}
