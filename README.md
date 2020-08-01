@@ -8,6 +8,7 @@ Yet another pet-project with Instagram-like app implementation.
 
 - PHP 7.2
 - Laravel 7.2
+- Postgres 9.5
 - Vue 2.5
 
 ## Startup guide
