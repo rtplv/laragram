@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="login-page auth-page container">
+<div class="reset-by-email-page auth-page container">
         <article class="panel">
             <p class="panel-heading">
                 {{ __('Reset Password') }}
