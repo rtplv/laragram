@@ -36,3 +36,7 @@ php artisan db:seed --class=DatabaseSeeder
 - for development:  `npm run hot`
 - for production: `npm run prod`
 
+## Demo credentials
+
+- email - **demo@demo.ru** 
+- password - **demo**
