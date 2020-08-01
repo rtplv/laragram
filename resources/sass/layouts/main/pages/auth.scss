@@ -1,4 +1,4 @@
-.login-page {
+.auth-page {
     padding: 25px 0;
     .panel {
         margin: 0 auto;
@@ -7,7 +7,10 @@
             background-image: linear-gradient(to right, #8800ff, #7031ff, #5646ff, #3853ff, #005eff);
             color: #ffffff;
         }
-        .login-form {
+        .panel-block {
+            display: block;
+        }
+        .auth-form {
             width: 100%;
             .field {
                 margin-bottom: .75rem;

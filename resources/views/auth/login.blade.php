@@ -1,13 +1,13 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="login-page container">
+<div class="login-page auth-page container">
         <article class="panel">
             <p class="panel-heading">
                 {{ __('Login') }}
             </p>
             <div class="panel-block">
-                <form class="login-form"
+                <form class="auth-form"
                       method="POST"
                       action="{{ route('login') }}">
                     @csrf

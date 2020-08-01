@@ -107,6 +107,7 @@
         align-items: center;
         .login-link {
             font-size: 16px;
+            font-weight: 300;
             margin-right: 15px;
         }
         .register-button {
