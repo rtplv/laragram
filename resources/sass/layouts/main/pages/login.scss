@@ -3,6 +3,10 @@
     .panel {
         margin: 0 auto;
         width: 50%;
+        .panel-heading {
+            background-image: linear-gradient(to right, #8800ff, #7031ff, #5646ff, #3853ff, #005eff);
+            color: #ffffff;
+        }
         .login-form {
             width: 100%;
             .field {

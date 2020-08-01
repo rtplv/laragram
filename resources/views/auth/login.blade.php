@@ -17,14 +17,14 @@
                             {{ __('E-Mail Address') }}
                         </label>
 
-                        <div class="control has-icons-left has-icons-right">
+                        <div class="control has-icons-left">
                             <input id="email" type="email"
                                    class="input @error('email') is-danger @enderror" name="email"
                                    value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                             <span class="icon is-small is-left">
-                                  <i class="fas fa-envelope"></i>
-                                </span>
+                              <i class="fas fa-envelope"></i>
+                            </span>
                         </div>
 
                         @error('email')
@@ -35,14 +35,14 @@
                     <div class="field">
                         <label class="label">{{ __('Password') }}</label>
 
-                        <div class="control has-icons-left has-icons-right">
+                        <div class="control has-icons-left">
                             <input id="password" type="password"
                                    class="input @error('password') is-danger @enderror" name="password"
                                    required autocomplete="current-password">
 
                             <span class="icon is-small is-left">
-                                  <i class="fas fa-key"></i>
-                                </span>
+                              <i class="fas fa-key"></i>
+                            </span>
                         </div>
 
                         @error('password')
@@ -63,7 +63,7 @@
 
                     <div class="confirm-field field is-grouped">
                         <div class="control">
-                            <button class="button is-link">{{ __('Login') }}</button>
+                            <button class="button is-success">{{ __('Login') }}</button>
                         </div>
 
                         <div class="control">

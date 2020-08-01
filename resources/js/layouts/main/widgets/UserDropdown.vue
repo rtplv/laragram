@@ -25,12 +25,15 @@
         </div>
 
         <div class="guest-block" v-else>
-            <a href="#"
+            <a href="/login"
                class="login-link ui-link">
                 Вход
             </a>
 
-            <button class="register-button button is-primary">Регистрация</button>
+            <button class="register-button button is-primary"
+                    @click="navToRegister">
+                Регистрация
+            </button>
         </div>
     </div>
 </template>
@@ -66,6 +69,9 @@
                 if (res.success) {
                     location.href = '/login';
                 }
+            },
+            navToRegister() {
+                location.href = '/register';
             }
         }
     }
