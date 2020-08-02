@@ -1,5 +1,8 @@
 <template>
     <div class="user-block">
+        <button class="loader-placeholder button is-loading"
+                v-if="!userChecked" />
+
         <div class="dropdown"
              v-if="user"
              :class="{ 'is-active': isOpened }">
@@ -24,7 +27,8 @@
             </div>
         </div>
 
-        <div class="guest-block" v-else>
+        <div class="guest-block"
+             v-if="userChecked && !user">
             <a href="/login"
                class="login-link ui-link">
                 Вход
@@ -45,6 +49,7 @@
         name: "MainLayoutUserDropdown",
         data: () => ({
            isOpened: false,
+           userChecked: false,
         }),
         mounted() {
           this.getUser();
@@ -59,9 +64,9 @@
                 this.isOpened = !this.isOpened;
             },
             async getUser() {
-                const user = await this.$store.dispatch('getUser');
+                await this.$store.dispatch('getUser');
 
-
+                this.userChecked = true;
             },
             async logout() {
                 const res = await this.$store.dispatch('logout');
@@ -79,6 +84,11 @@
 
 <style lang="scss" scoped>
     @import '../../../../sass/variables';
+
+    .loader-placeholder {
+        width: 100px;
+        border: none;
+    }
 
     .dropdown {
         .button {
