@@ -1,4 +1,4 @@
-import * as axios from 'axios';
+import axios from 'axios';
 
 export const checkAuth = async ({ commit }) => {
     const { data } = await axios.get('/auth/check');

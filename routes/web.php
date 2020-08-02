@@ -25,5 +25,7 @@ Route::middleware('auth')->group(function() {
     Route::get('/feed', 'FeedController@index');
 
     Route::get('/post/create', 'PostController@create');
+    Route::post('/post/create', 'PostController@createPost');
+
     Route::get('/post/{id}', 'PostController@index');
 });

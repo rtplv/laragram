@@ -16,10 +16,7 @@ class CreatePhotosTable extends Migration
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
 
-            /**
-             * UUID generated on file write into storage
-             */
-            $table->string('uuid');
+            $table->string('storage_path');
             $table->bigInteger('post_id');
 
             $table->timestamps();

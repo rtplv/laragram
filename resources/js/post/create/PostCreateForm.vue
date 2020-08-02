@@ -57,9 +57,12 @@
 </template>
 
 <script>
+  import axios from 'axios';
+
   export default {
     name: 'PostCreateForm',
     data: () => ({
+      isLoading: false,
       form: {
         photoFile: null,
         description: '',
@@ -86,8 +89,19 @@
 
         reader.readAsDataURL(file);
       },
-      handleFormSubmit() {
-        console.log(this.form);
+      async handleFormSubmit() {
+        const reqData = new FormData();
+
+        this.isLoading = true;
+
+        reqData.append('photo', this.form.photoFile);
+        reqData.append('description', this.form.description);
+
+        const res = await axios.post('/post/create', reqData)
+
+        console.log(res);
+
+        this.isLoading = false;
       }
     }
   };
