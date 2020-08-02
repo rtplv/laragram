@@ -99,7 +99,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../../../../sass/variables';
+  @import '../../../sass/variables';
 
   .loader-placeholder {
     width: 100px;

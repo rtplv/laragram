@@ -1,5 +1,5 @@
 @extends('layouts.main')
 
 @section('content')
-    Создание
+    <post-create-page></post-create-page>
 @endsection

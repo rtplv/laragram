@@ -21,6 +21,6 @@ mix.webpackConfig({
 
 mix.browserSync('laragram.ru');
 
-mix.js('resources/js/layouts/main/index.js', 'public/js/layouts/main.js')
-    .sass('resources/sass/layouts/main/index.scss', 'public/css/layouts/main.css')
+mix.js('resources/js/index.js', 'public/js/index.js')
+    .sass('resources/sass/index.scss', 'public/css/index.css')
     .copy('resources/assets', 'public/assets');

@@ -18,12 +18,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
 {{--    Styles--}}
-    <link rel="stylesheet" href="{{ mix('css/layouts/main.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/index.css') }}">
 
     <title>Laragram</title>
 </head>
 <body>
-    <div id="mainLayoutVueApp">
+    <div id="app">
         <x-layouts.main.header />
 
         <main>
@@ -33,6 +33,6 @@
         <x-layouts.main.footer />
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg==" crossorigin="anonymous"></script>
-    <script src="{{ mix('js/layouts/main.js') }}"></script>
+    <script src="{{ mix('js/index.js') }}"></script>
 </body>
 </html>

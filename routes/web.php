@@ -24,6 +24,6 @@ Route::get('/auth/logout', 'AuthController@logout');
 Route::middleware('auth')->group(function() {
     Route::get('/feed', 'FeedController@index');
 
-    Route::get('/post/{id}', 'PostController@index');
     Route::get('/post/create', 'PostController@create');
+    Route::get('/post/{id}', 'PostController@index');
 });
