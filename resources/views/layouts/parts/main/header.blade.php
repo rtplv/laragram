@@ -21,12 +21,13 @@
 
     <article class="main-layout-header-user">
         @if($userLoggedIn)
-            <button class="main-layout-header-user__create-post-button button">
+            <a class="main-layout-header-user__create-post-button button"
+               href="/post/create">
                 <span class="icon is-small">
                   <i class="fas fa-plus"></i>
                 </span>
                 <span>Новый пост</span>
-            </button>
+            </a>
         @endif
 
         <user-dropdown :user-logged-in="{{ $userLoggedIn ? 'true' : 'false' }}"></user-dropdown>

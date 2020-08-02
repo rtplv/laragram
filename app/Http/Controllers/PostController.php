@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Services\PostService;
 use Illuminate\Http\Request;
 
@@ -24,5 +25,18 @@ class PostController extends Controller
             'success' => true,
             'post' => $post
         ]);
+    }
+
+    public function getPost(string $id)
+    {
+        if (!isset($id)) {
+            // TODO: Response handler
+            return response()->json([
+                'success' => false,
+                'error' => 'Post id is not defined'
+            ]);
+        }
+
+        return (new PostService)->getPost($id);
     }
 }

@@ -9,7 +9,10 @@ class AuthController extends Controller
 {
     public function getUser()
     {
-        return Auth::user();
+        return response()->json([
+            'success' => true,
+            'user' => Auth::user()
+        ]);
     }
 
     public function logout()

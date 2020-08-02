@@ -49,7 +49,9 @@
 
       <div class="field">
         <div class="control">
-          <button class="button is-success" type="submit">Добавить</button>
+          <button class="button is-success"
+                  :class="{ 'is-loading': isLoading }"
+                  type="submit">Добавить</button>
         </div>
       </div>
     </form>
@@ -97,9 +99,9 @@
         reqData.append('photo', this.form.photoFile);
         reqData.append('description', this.form.description);
 
-        const res = await axios.post('/post/create', reqData)
+        const { data } = await axios.post('/post/create', reqData)
 
-        console.log(res);
+        document.location.href = `/post/${data.post.id}`;
 
         this.isLoading = false;
       }
@@ -121,7 +123,7 @@
           width: 400px;
           height: 400px;
           border-radius: 3px;
-          margin: 0 auto;
+          margin: 0 auto 50px auto;
         }
       }
     }

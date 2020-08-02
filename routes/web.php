@@ -27,5 +27,7 @@ Route::middleware('auth')->group(function() {
     Route::get('/post/create', 'PostController@create');
     Route::post('/post/create', 'PostController@createPost');
 
+    Route::get('/post/get/{id}', 'PostController@getPost');
+
     Route::get('/post/{id}', 'PostController@index');
 });

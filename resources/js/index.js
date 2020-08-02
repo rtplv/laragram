@@ -13,6 +13,7 @@ import UserDropdown from "./layouts/main/UserDropdown";
 
 // Pages components
 import PostCreatePage from "./post/create/PostCreatePage";
+import PostPage from "./post/PostPage";
 
 const vm = new Vue({
     el: '#app',
@@ -20,6 +21,7 @@ const vm = new Vue({
     components: {
         UserDropdown,
         // Pages
-        PostCreatePage
+        PostCreatePage,
+        PostPage
     }
 })

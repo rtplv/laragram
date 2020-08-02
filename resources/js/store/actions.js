@@ -11,7 +11,7 @@ export const checkAuth = async ({ commit }) => {
 export const getUser = async ({ commit }) => {
     const { data } = await axios.get('/auth/getUser');
 
-    commit('setUser', data);
+    commit('setUser', data.user);
 
     return data;
 }
