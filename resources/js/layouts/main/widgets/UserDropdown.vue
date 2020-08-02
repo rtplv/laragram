@@ -8,15 +8,16 @@
            v-if="user"
            :class="{ 'is-active': isOpened }">
         <div class="dropdown-trigger"
-             @click="handleDropdownOpened">
+             @click.stop="handleDropdownToggled">
           <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-            <img class="avatar" src="assets/avatar.jpg"/>
+            <img class="avatar" src="/assets/avatar.jpg"/>
             <span>{{ user.name }}</span>
           </button>
         </div>
 
         <div class="dropdown-menu"
              id="dropdownMenu"
+             v-click-outside="handleDropdownClosed"
              role="menu">
           <div class="dropdown-content">
             <a href="#"
@@ -70,8 +71,11 @@
       })
     },
     methods: {
-      handleDropdownOpened() {
+      handleDropdownToggled() {
         this.isOpened = !this.isOpened;
+      },
+      handleDropdownClosed() {
+        this.isOpened = false;
       },
       async getUser() {
         this.isLoading = true;

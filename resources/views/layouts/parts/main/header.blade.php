@@ -2,7 +2,7 @@
     <article class="main-layout-header-logo">
         <a href="/">
             <img class="main-layout-header-logo__image"
-                 src="{{ asset('assets/logo.png') }}"
+                 src="{{ asset('/assets/logo.png') }}"
                  alt="Laragram">
         </a>
     </article>

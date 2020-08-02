@@ -5,6 +5,9 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 import { store } from './store';
+
+import './directives';
+
 import UserDropdown from "./widgets/UserDropdown";
 
 const vm = new Vue({
