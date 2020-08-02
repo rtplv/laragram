@@ -20,11 +20,15 @@
     @endif
 
     <article class="main-layout-header-user">
-{{--        <a class="main-layout-header-user__link ui-link"--}}
-{{--           href="#">--}}
-{{--            Ruslan Tupolev--}}
-{{--            <i class="main-layout-header-user__link-icon fas fa-chevron-down"></i>--}}
-{{--        </a>--}}
-        <user-dropdown></user-dropdown>
+        @if($userLoggedIn)
+            <button class="main-layout-header-user__create-post-button button">
+                <span class="icon is-small">
+                  <i class="fas fa-plus"></i>
+                </span>
+                <span>Новый пост</span>
+            </button>
+        @endif
+
+        <user-dropdown :user-logged-in="{{ $userLoggedIn ? 'true' : 'false' }}"></user-dropdown>
     </article>
 </header>

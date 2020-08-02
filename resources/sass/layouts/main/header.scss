@@ -14,12 +14,11 @@
         margin-left: 35px;
     }
     &-user {
+        display: flex;
+        align-items: center;
         margin-left: auto;
-        &__link {
-            &-icon {
-                font-size: 12px;
-                margin-left: 3px;
-            }
+        &__create-post-button {
+            margin-right: 20px;
         }
     }
 }

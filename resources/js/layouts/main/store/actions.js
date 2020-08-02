@@ -1,5 +1,13 @@
 import * as axios from 'axios';
 
+export const checkAuth = async ({ commit }) => {
+    const { data } = await axios.get('/auth/check');
+
+    commit('setUserLoggedIn', data.loggedIn);
+
+    return data;
+}
+
 export const getUser = async ({ commit }) => {
     const { data } = await axios.get('/auth/getUser');
 

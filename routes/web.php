@@ -19,7 +19,8 @@ Route::get('/feed', 'FeedController@index');
 
 Auth::routes();
 
-Route::middleware('auth')->group(function() {
-    Route::get('/auth/getUser', 'AuthController@getUser');
-    Route::get('/auth/logout', 'AuthController@logout');
-});
+Route::get('/auth/getUser', 'AuthController@getUser');
+Route::get('/auth/logout', 'AuthController@logout');
+
+//Route::middleware('auth')->group(function() {
+//});
