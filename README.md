@@ -14,7 +14,6 @@ Yet another pet-project with Instagram-like app implementation.
 ## Startup guide
 
 1. Install dependencies
-
 ```bash
 composer install
 npm install

@@ -9,6 +9,7 @@ use App\Models\Post;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class PostService
 {
@@ -25,7 +26,7 @@ class PostService
         $post->save();
 
         // Storage is symlink on /public folder
-        $photo->storage_path = '/storage/' . $photoStoragePath;
+        $photo->storage_path = Storage::url($photoStoragePath);
         $photo->post()->associate($post);
         $photo->save();
 
