@@ -46,8 +46,6 @@ export default {
     post: null
   }),
   mounted() {
-    moment.locale('ru');
-
     this.getPost();
   },
   computed: {
@@ -76,6 +74,8 @@ export default {
 <style lang="scss" scoped>
   .post-page {
     .card {
+      max-width: 50%;
+      margin: 50px auto;
       .card-content {
         .media-content {
           align-self: center;

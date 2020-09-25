@@ -35,9 +35,35 @@ class PostService
 
     public function getPost(string $id): JsonResponse
     {
+        // TODO: ResponseHelper с обработкой ошибок в Exception/Handler
         return response()->json([
             'success' => true,
             'post' => Post::query()->with(['photo', 'user'])->find($id)
+        ]);
+    }
+
+    public function getPostsByUserId(int $userId): JsonResponse
+    {
+        return response()->json([
+            'success' => true,
+            'posts' => Post::query()
+                ->with(['photo', 'user'])
+                ->where('user_id', $userId)
+                ->orderBy('id', 'desc')
+                ->get()
+        ]);
+    }
+
+    public function getPostsForFeed(int $offset = 0, int $limit = 20)
+    {
+        return response()->json([
+            'success' => true,
+            'posts' => Post::query()
+                ->with(['photo', 'user'])
+                ->limit($limit)
+                ->offset($offset)
+                ->orderBy('id', 'desc')
+                ->get()
         ]);
     }
 }

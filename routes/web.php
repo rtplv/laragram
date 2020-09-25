@@ -23,6 +23,10 @@ Route::get('/auth/logout', 'AuthController@logout');
 
 Route::middleware('auth')->group(function() {
     Route::get('/feed', 'FeedController@index');
+    Route::post('/feed/get', 'FeedController@feedPosts');
+
+    Route::get('/me', 'FeedController@me');
+    Route::post('/me/get', 'FeedController@mePosts');
 
     Route::get('/post/create', 'PostController@create');
     Route::post('/post/create', 'PostController@createPost');
