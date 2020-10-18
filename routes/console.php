@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
+
+
+Artisan::command('testCommand', function () {
+    $user = \App\Models\User::query()
+        ->find(10)
+        ->activeAvatar();
+
+    dd($user);
+});

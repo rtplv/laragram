@@ -37,6 +37,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function avatars()
+    {
+        return $this->hasMany(Avatar::class, 'user_id');
+    }
+
     public function posts()
     {
         return $this->hasMany(Post::class, 'user_id');
